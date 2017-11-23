@@ -2,9 +2,16 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { LocalDataService } from './local-data.service';
+import { TranslateService } from 'ng2-translate';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { Login } from '../pages/login/login';
+import { News } from '../pages/news/news';
+import { Graphs } from '../pages/graphs/graphs';
+import { Profes } from '../pages/profes/profes';
+import { Perfil } from '../pages/perfil/perfil';
+import { Tabs } from '../pages/tabs/tabs';
+import { User } from './models/user.model';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,17 +19,25 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
-
+  rootPage: any = Tabs;
   pages: Array<{title: string, component: any}>;
+  userLogged: User = this.localDataService.getUser();
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+      public platform: Platform, 
+      public statusBar: StatusBar, 
+      public splashScreen: SplashScreen,
+      public localDataService: LocalDataService,) 
+      {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Noticias', component: News },
+      { title: 'Estadísticas', component: Graphs },
+      { title: 'Profesores', component: Profes },
+      { title: 'Perfil', component: Perfil },
+      { title: 'Salir', component: Login },
     ];
 
   }
