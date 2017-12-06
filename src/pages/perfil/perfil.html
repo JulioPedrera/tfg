@@ -1,17 +1,97 @@
+<!--
+  Generated template for the PerfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Perfil</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="openInfoModal()">
-        <ion-icon name="ios-information-circle-outline"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Perfil</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openInfoModal()">
+                <ion-icon name="ios-information-circle-outline"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
+    <ion-row>
+        <ion-col col-4>
+            <img class="logo" margin src="assets/images/perfil.jpg" width="100">
+        </ion-col>
+        <ion-col col-8>
+            <ion-list padding-top>
+                <ion-item>
+                    <span item-right>Julio Pineda Páez</span>
+                </ion-item>
+                <ion-item>
+                    <span item-right>Trabajo Fin de Grado</span>
+                </ion-item>
+                <ion-item>
+                    <span item-right>I. I. - Ing. del Software</span>
+                </ion-item>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+
+    <ion-list padding-top>
+        <ion-row>
+            <ion-col col-5 *ngIf="autor != 'invitado'">
+                <ion-title text-left>Valorar</ion-title>
+            </ion-col>
+            <ion-col col-7 *ngIf="autor != 'invitado'">
+                <ion-item>
+                    <div item-right>{{autor}}</div>
+                </ion-item>
+            </ion-col>
+
+            <ion-col col-12 text-center *ngIf="autor != 'invitado'">
+                <ion-item>
+                    <ion-textarea type="text"[(ngModel)]="comentario" placeholder="Escribe tu valoración"></ion-textarea>
+                </ion-item>
+                <ion-item>
+                    <button ion-button item-right (click)="saveComentario()">Enviar</button>
+                </ion-item>
+            </ion-col>
+
+            <ion-col col-12 text-center *ngIf="autor == 'invitado'">
+                <ion-item>
+                    <p>Lo siento, un usuario invitado no puede valorar.<br>
+                    Para valorar, acceda con su usuario de profesor.</p>
+                </ion-item>
+            </ion-col>
+
+            <ion-col col-12 text-center>
+                <ion-title item-center>Valoraciones</ion-title>
+            </ion-col>
+
+            <ion-col col-12>
+                <ng-container *ngFor="let elem of comments">
+                    <ion-card>
+                        <ion-item>
+                            {{elem.texto}}
+                        </ion-item>
+                        <ion-row>
+                            <ion-col>
+                                <button class="labelCard" ion-button icon-left clear small>
+                                    {{elem.autor}}
+                                </button>
+                            </ion-col>
+                            <ion-col center text-center>
+                                <button class="labelCard" ion-button icon-left clear small>
+                                    {{elem.fecha.toLocaleString()}}
+                                </button>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card>
+                </ng-container>
+            </ion-col>
+
+        </ion-row>
+    </ion-list>
 </ion-content>

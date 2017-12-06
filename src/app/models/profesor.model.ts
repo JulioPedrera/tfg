@@ -2,15 +2,13 @@ export class Profesor {
     nombre: string;
     despacho: string;
     telefono: string;
+    link: string;
 
-    constructor(){
-        
-    }
-
-    setUser(profesor: any): Profesor {
-        this.nombre = profesor.nombre;
-        this.despacho = profesor.string;
-        this.telefono = profesor.string;
+    constructor(nombre: string, despacho: string, telefono: string, link: string) {
+        this.nombre = nombre;
+        this.despacho = despacho;
+        this.telefono = telefono;
+        this.link = link;
         return this;
     }
 }

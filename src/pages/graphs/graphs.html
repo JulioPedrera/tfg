@@ -1,3 +1,9 @@
+<!--
+  Generated template for the GraphsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
@@ -12,6 +18,22 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="noMargin" padding>
+  <ion-card>
+    <ion-card-header>
+      Tipos de noticias
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #canvasNews></canvas>
+    </ion-card-content>
+  </ion-card>
 
+  <ion-card>
+    <ion-card-header>
+      Despachos de los profesores
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #canvasProfes></canvas>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

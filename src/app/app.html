@@ -1,3 +1,4 @@
+<!-- Menú -->
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
@@ -5,10 +6,15 @@
     </ion-toolbar>
   </ion-header>
 
+  <!-- Contenido del menú desplegado -->
   <ion-content>
+
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
+        <!-- <div class="menuAbajo">{{p.title}}</div>
+          *ngIf="p.title != 'Contacto' && p.title != 'Salir'">  
+              *ngIf="p.title == 'Contacto' || p.title == 'Salir'">   -->
       </button>
     </ion-list>
   </ion-content>

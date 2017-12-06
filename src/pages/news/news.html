@@ -1,3 +1,9 @@
+<!--
+  Generated template for the NewsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
@@ -12,6 +18,41 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <div class="content" padding>
+    <ion-segment [(ngModel)]="segment">
+      <ion-segment-button value="option1" (click)="onChangeSegment(1)">General</ion-segment-button>
+      <ion-segment-button value="option2" (click)="onChangeSegment(2)">Asignatura</ion-segment-button>
+      <ion-segment-button value="option3" (click)="onChangeSegment(3)">Master</ion-segment-button>
+      <ion-segment-button value="option4" (click)="onChangeSegment(4)">Doctorado</ion-segment-button>
+    </ion-segment>
+  </div>
 
+  <ng-container *ngFor="let item of news">
+    <ion-card>
+      <ion-item>
+        {{item.titulo}}
+      </ion-item>
+      <ion-card-content>
+        <!-- <p [innerHTML]=item.descripcion></p> -->
+        <p [innerHTML]=truncateText(item)></p>
+        <ng-container *ngIf="item.descripcion.length > 180">
+          <button class="labelCard" *ngIf="item.truncate" (click)=changeView(item)>(Ver más)</button>
+          <button class="labelCard" *ngIf="!(item.truncate)" (click)=changeView(item)>(Ver menos)</button>
+        </ng-container>
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <button class="labelCard primeraMayuscula" ion-button icon-left clear small>
+            {{item.categoria}}
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <button class="labelCard" ion-button icon-left clear small>
+            {{item.fecha.toLocaleString()}}
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ng-container>
 </ion-content>

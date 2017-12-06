@@ -1,24 +1,45 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, Alert } from 'ionic-angular';
-import { ApiComponents } from '../../app/components/api-components';
-import { TranslateService } from 'ng2-translate';
+import { IonicPage, NavController, NavParams, Alert } from 'ionic-angular';
+import { ApiComponents } from '../../components/api-components';
+import { ServiceWS } from '../../app/webservice/WS.service';
+import { LocalDataService } from '../../app/local-data.service';
 
+/**
+ * Generated class for the ProfesPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
   selector: 'page-profes',
-  templateUrl: 'profes.html'
+  templateUrl: 'profes.html',
 })
-export class Profes {
+export class ProfesPage {
 
-  constructor(
+  profes: any[];
+
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams,
     private apiComponents: ApiComponents,
-		private translate: TranslateService) {
+    private serviceWS: ServiceWS,
+    public localDataService: LocalDataService) {
+      this.getProfes();
     }
-
-
 
   openInfoModal(){
     this.apiComponents.createAlertForInfo().then((alert: Alert) => {
       alert.present();
     });
   }
+
+  getProfes(){
+    this.profes = this.localDataService.getProfes();
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ProfesPage');
+  }
+
 }

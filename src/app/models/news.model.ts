@@ -1,22 +1,17 @@
 export class News {
     titulo: string;
-    link: string;
     descripcion: string;
     tipo: string;
     categoria: string;
     fecha: Date;
+    truncate: boolean;
 
-    constructor(){
-        
-    }
-
-    setNews(news: any): News {
-        this.titulo = news.titulo;
-        this.link = news.link;
-        this.descripcion = news.descripcion;
-        this.tipo = news.tipo;
-        this.categoria = news.categoria;
-        this.fecha = news.fecha;
-        return this;
+    constructor(elem: any){
+        this.titulo = elem.title;
+        this.descripcion = elem.description;
+        this.tipo = elem.type;
+        this.categoria = elem.category;
+        this.fecha = new Date(elem.pubDate);
+        this.truncate = true;
     }
 }

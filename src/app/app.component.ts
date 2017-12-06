@@ -1,43 +1,41 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, App, MenuController, Alert, ModalController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LocalDataService } from './local-data.service';
-import { TranslateService } from 'ng2-translate';
-
-import { Login } from '../pages/login/login';
-import { News } from '../pages/news/news';
-import { Graphs } from '../pages/graphs/graphs';
-import { Profes } from '../pages/profes/profes';
-import { Perfil } from '../pages/perfil/perfil';
-import { Tabs } from '../pages/tabs/tabs';
 import { User } from './models/user.model';
+import { ApiComponents } from '../components/api-components';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Tabs;
-  pages: Array<{title: string, component: any}>;
+  rootPage: any = "LoginPage";
+  pages: Array<{ title: string, component: any, index: number }>;
   userLogged: User = this.localDataService.getUser();
 
   constructor(
-      public platform: Platform, 
-      public statusBar: StatusBar, 
-      public splashScreen: SplashScreen,
-      public localDataService: LocalDataService,) 
-      {
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    public localDataService: LocalDataService,
+    public appCtrl: App,
+    public menu: MenuController,
+    public apiComponents: ApiComponents,
+    public modalCtrl: ModalController) {
+
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Noticias', component: News },
-      { title: 'Estadísticas', component: Graphs },
-      { title: 'Profesores', component: Profes },
-      { title: 'Perfil', component: Perfil },
-      { title: 'Salir', component: Login },
+      { title: 'Noticias', component: "NewsPage", index: 0 },
+      { title: 'Estadísticas', component: "GraphsPage", index: 1 },
+      { title: 'Profesores', component: "ProfesPage", index: 2 },
+      { title: 'Perfil', component: "PerfilPage", index: 3 },
+      { title: 'Contacto', component: "ContactPage", index: 4 },
+      { title: 'Salir', component: "LoginPage", index: 5 },
     ];
 
   }
@@ -51,9 +49,26 @@ export class MyApp {
     });
   }
 
+
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.menu.close();
+    if (page.title == 'Salir') {
+      this.apiComponents.createConfirmExit().then((alert: Alert) => {
+        alert.present();
+      });
+    } else {
+      if (page.title == 'Contacto') {
+        this.presentModalContact();
+      } else {
+        this.appCtrl.getRootNav().setRoot("TabsPage", { tabIndex: page.index });
+      }
+    }
+  }
+
+  presentModalContact(){
+    let profileModal = this.modalCtrl.create("ContactPage");
+    profileModal.present();
   }
 }
