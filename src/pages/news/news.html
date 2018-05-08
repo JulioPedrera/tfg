@@ -16,25 +16,22 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <div class="content" padding>
+  <div class="content">
     <ion-segment [(ngModel)]="segment">
       <ion-segment-button value="option1" (click)="onChangeSegment(1)">General</ion-segment-button>
-      <ion-segment-button value="option2" (click)="onChangeSegment(2)">Asignatura</ion-segment-button>
-      <ion-segment-button value="option3" (click)="onChangeSegment(3)">Master</ion-segment-button>
-      <ion-segment-button value="option4" (click)="onChangeSegment(4)">Doctorado</ion-segment-button>
+      <ion-segment-button value="option2" (click)="onChangeSegment(2)">Asignaturas</ion-segment-button>
+      <ion-segment-button value="option3" (click)="onChangeSegment(3)">TFG y TFM</ion-segment-button>
     </ion-segment>
   </div>
+</ion-header>
 
+<ion-content no-padding>
   <ng-container *ngFor="let item of news">
     <ion-card>
-      <ion-item>
-        {{item.titulo}}
+      <ion-item text-wrap>
+        <b>{{item.titulo}}</b>
       </ion-item>
       <ion-card-content>
-        <!-- <p [innerHTML]=item.descripcion></p> -->
         <p [innerHTML]=truncateText(item)></p>
         <ng-container *ngIf="item.descripcion.length > 180">
           <button class="labelCard" *ngIf="item.truncate" (click)=changeView(item)>(Ver más)</button>

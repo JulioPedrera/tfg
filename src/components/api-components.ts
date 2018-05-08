@@ -22,7 +22,7 @@ export class ApiComponents {
         return new Promise((resolve, reject) => {
             let alert = this.alertCtrl.create({
                 title: 'TFG App',
-                subTitle: 'Versión 1.0',
+                subTitle: 'Versión 1.1',
                 buttons: [
                     {
                         text: 'OK',
@@ -39,7 +39,7 @@ export class ApiComponents {
         return new Promise((resolve, reject) => {
             let alert = this.alertCtrl.create({
                 title: 'Usuario y/o contraseña incorrecta',
-                subTitle: 'Inténtelo de nuevo o póngase en contacto con nosotros: julpinpae@us.es',
+                subTitle: 'Inténtelo de nuevo o póngase en contacto con nosotros: julpinpae@alum.us.es',
                 buttons: [
                     {
                         text: 'OK',

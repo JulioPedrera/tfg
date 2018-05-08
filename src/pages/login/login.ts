@@ -5,6 +5,7 @@ import { User } from '../../app/models/user.model';
 import { ApiComponents } from '../../components/api-components';
 import { ServiceWS } from '../../app/webservice/WS.service';
 import { Profesor } from '../../app/models/profesor.model';
+import { News } from '../../app/models/news.model';
 
 /**
  * Generated class for the LoginPage page.
@@ -31,13 +32,50 @@ export class LoginPage {
     public menu: MenuController,
     private apiComponents: ApiComponents,
     private serviceWS: ServiceWS) {
-    this.serviceWS.makeRequestProfes().then((response) => {
-      this.usersOk = true;
-    })
+      this.init();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  init(){
+    /*this.serviceWS.makeRequestProfes().then((response) => {
+      this.usersOk = true;
+    })*/
+    this.serviceWS.getProfesJson().then((response) => {
+      this.usersOk = true;
+    })
+    this.serviceWS.makeRequestNews().then((response) => {
+      let news: News[] = response;
+      this.serviceWS.makeRequestNewsTfg().then((response) => {
+        response.forEach(element => {
+          news.push(element)
+        })
+        this.serviceWS.makeRequestNewsTfm().then((response) => {
+          response.forEach(element => {
+            news.push(element)
+          })
+          this.serviceWS.makeRequestNewsPgpi().then((response) => {
+            response.forEach(element => {
+              news.push(element)
+            })
+            this.serviceWS.makeRequestNewsIr().then((response) => {
+              response.forEach(element => {
+                news.push(element)
+              })
+              this.serviceWS.makeRequestNewsPsg().then((response) => {
+                response.forEach(element => {
+                  news.push(element)
+                })
+                this.serviceWS.makeRequestNewsIissi().then((response) => {
+                  response.forEach(element => {
+                    news.push(element)
+                  })
+                  this.localDataService.setNews(news);
+                })
+              })
+            })
+          })
+        })
+      })
+    })
   }
 
   entrar() {
@@ -73,4 +111,14 @@ export class LoginPage {
       }
     })
   }
+
+  ionViewDidLoad() {
+    if(this.localDataService.getUser() != null){
+      this.navCtrl.setRoot("TabsPage");
+      this.menu.enable(true);
+    }else{
+      this.menu.enable(false);
+    }
+  }
+
 }

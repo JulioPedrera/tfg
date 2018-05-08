@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, App, MenuController, Alert, ModalController } from 'ionic-angular';
+import { Nav, Platform, App, MenuController, Alert, ModalController, Loading } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LocalDataService } from './local-data.service';
@@ -40,6 +40,33 @@ export class MyApp {
 
   }
 
+  openPage(page) {
+    this.apiComponents.createLoading().then((loading: Loading) => {
+      loading.present();
+      this.menu.close();
+      if (page.title == 'Salir') {
+        this.apiComponents.createConfirmExit().then((alert: Alert) => {
+          alert.present();
+        });
+      } else {
+        if (page.title == 'Contacto') {
+          this.presentModalContact();
+        } else {
+          this.appCtrl.getRootNav().setRoot("TabsPage", { tabIndex: page.index });
+        }
+      }
+      loading.dismiss();
+    });
+
+
+
+  }
+
+  presentModalContact(){
+    let profileModal = this.modalCtrl.create("ContactPage");
+    profileModal.present();
+  }
+
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -49,26 +76,4 @@ export class MyApp {
     });
   }
 
-
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.menu.close();
-    if (page.title == 'Salir') {
-      this.apiComponents.createConfirmExit().then((alert: Alert) => {
-        alert.present();
-      });
-    } else {
-      if (page.title == 'Contacto') {
-        this.presentModalContact();
-      } else {
-        this.appCtrl.getRootNav().setRoot("TabsPage", { tabIndex: page.index });
-      }
-    }
-  }
-
-  presentModalContact(){
-    let profileModal = this.modalCtrl.create("ContactPage");
-    profileModal.present();
-  }
 }

@@ -1,8 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Alert } from 'ionic-angular';
 import { ApiComponents } from '../../components/api-components';
-import { User } from '../../app/models/user.model';
-import { Chart } from 'chart.js';
 import { News } from '../../app/models/news.model';
 import { Profesor } from '../../app/models/profesor.model';
 import { LocalDataService } from '../../app/local-data.service';
@@ -26,10 +24,10 @@ export class GraphsPage {
 
   news: News[];
   profs: Profesor[];
-  newsLabels: string[] = ["General", "Asignatura", "Máster ITS", "Doctorado"];
-  newsNumbers: number[] = [0,0,0,0];
-  profsLabels: string[] = ["Módulo F-PB", "Módulo F-1P", "Módulo I", "Módulo E"];
-  profsNumbers: number[] = [0,0,0,0];
+  newsLabels: string[] = ["General", "Asignaturas", "TFG y TFM"];
+  newsNumbers: number[] = [0, 0, 0];
+  profsLabels: string[] = ["Módulo F0", "Módulo F1", "Modulo I", "Módulo E"];
+  profsNumbers: number[] = [0, 0, 0, 0];
 
   constructor(
     public navCtrl: NavController,
@@ -57,9 +55,6 @@ export class GraphsPage {
         case 'Asignatura':
           this.newsNumbers[1] += 1;
           break;
-        case 'Doctorado':
-          this.newsNumbers[3] += 1;
-          break;
         default:
           this.newsNumbers[2] += 1;
       }
@@ -83,8 +78,13 @@ export class GraphsPage {
   }
 
   ionViewDidLoad() {
+    let user = this.localDataService.getUser();
+    if (!user || user == null) {
+      this.navCtrl.setRoot("LoginPage");
+    }
     this.apiComponents.drawPie(this.canvasNews, this.newsLabels, this.newsNumbers);
     this.apiComponents.drawBar(this.canvasProfes, this.profsLabels, this.profsNumbers);
+    console.log("checkUser");
   }
 
 }

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App, Keyboard } from 'ionic-angular';
 import { LocalDataService } from '../../app/local-data.service';
 
 @IonicPage()
 @Component({
-  selector: 'page-tabs',
-  templateUrl: 'tabs.html'
+	selector: 'page-tabs',
+	templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
@@ -17,22 +17,21 @@ export class TabsPage {
 	menuOptions: any;
 
 	tabHiddenHide = true;
-	
+	showFooter: boolean = true;
+
 	constructor(
 		public appCtrl: App,
 		public localDataService: LocalDataService,
 		public navCtrl: NavController,
-		navParams: NavParams) {
-			this.mySelectedIndex = navParams.data.tabIndex || 0;
-
-			if(!this.localDataService.getUser() ||  this.localDataService.getUser() == null){
-				this.navCtrl.setRoot("LoginPage");
-			}
+		navParams: NavParams,
+		public keyboard: Keyboard) {
+		this.mySelectedIndex = navParams.data.tabIndex || 0;
 	}
-	
-	onChange(){
-		if(!this.localDataService.getUser() ||  this.localDataService.getUser() == null){
-			this.navCtrl.setRoot("LoginPage");
+
+	keyboardCheck() {
+		if (this.keyboard.isOpen()) {
+			// You logic goes here
+			this.showFooter = false;
 		}
 	}
 }

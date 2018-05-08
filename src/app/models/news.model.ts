@@ -3,7 +3,7 @@ export class News {
     descripcion: string;
     tipo: string;
     categoria: string;
-    fecha: Date;
+    fecha: string;
     truncate: boolean;
 
     constructor(elem: any){
@@ -11,7 +11,15 @@ export class News {
         this.descripcion = elem.description;
         this.tipo = elem.type;
         this.categoria = elem.category;
-        this.fecha = new Date(elem.pubDate);
+        this.fecha = new Date(elem.pubDate).toLocaleString();
         this.truncate = true;
+    }
+
+    setTipo(tipo: string){
+        this.tipo = tipo;
+    }
+
+    setCategoria(cat: string){
+        this.categoria = cat;
     }
 }

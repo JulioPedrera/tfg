@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LocalDataService } from '../../app/local-data.service';
+
 
 /**
  * Generated class for the ContactPage page.
@@ -15,11 +17,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public localDataService: LocalDataService) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ContactPage');
+    let user = this.localDataService.getUser();
+		if (!user || user == null) {
+			this.navCtrl.setRoot("LoginPage");
+		}
+		console.log("checkUser");
   }
+
 
 }

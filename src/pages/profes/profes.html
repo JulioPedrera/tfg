@@ -16,12 +16,13 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+  <ion-searchbar (ionInput)="searchBar($event)" placeholder="Buscar"></ion-searchbar>
 </ion-header>
 
 <ion-content padding>
   <ng-container *ngFor="let elem of profes">
     <ion-card>
-      <ion-item>
+      <ion-item text-wrap>
         {{elem.nombre}}
       </ion-item>
       <ion-row>
@@ -30,7 +31,17 @@
             {{elem.despacho}}
           </button>
         </ion-col>
-        <ion-col center text-center>
+
+        <ion-col>
+          <a href="{{elem.link}}">
+            <button class="labelCard" ion-button icon-left clear small>
+              <ion-label>Ir a web</ion-label>
+            </button>
+          </a>
+        </ion-col>
+
+
+        <ion-col center text-right>
           <button class="labelCard" ion-button icon-left clear small>
             {{elem.telefono}}
           </button>

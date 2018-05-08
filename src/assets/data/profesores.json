@@ -1,0 +1,428 @@
+[
+   {
+      "nombre":"Álvarez García, Juan Antonio",
+      "despacho":"F0.46",
+      "telefono":"954553867",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=62"
+   },
+   {
+      "nombre":"Arévalo Maldonado, Carlos",
+      "despacho":"F1.41",
+      "telefono":"954553873",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=6"
+   },
+   {
+      "nombre":"Barba Rodríguez, Irene",
+      "despacho":"F0.54",
+      "telefono":"954559814",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=117"
+   },
+   {
+      "nombre":"Benavides Cuevas, David",
+      "despacho":"F0.48",
+      "telefono":"954553866",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=44"
+   },
+   {
+      "nombre":"Bengoa Díaz, Alfonso",
+      "despacho":"F1.41",
+      "telefono":"954553873",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=8"
+   },
+   {
+      "nombre":"Bernárdez Jiménez, Beatriz",
+      "despacho":"F1.47",
+      "telefono":"954553870",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=9"
+   },
+   {
+      "nombre":"Borrego Núñez, Diana",
+      "despacho":"I0.72",
+      "telefono":"954556234",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=118"
+   },
+   {
+      "nombre":"Cañete Valdeón, José Miguel",
+      "despacho":"F1.42",
+      "telefono":"954553873",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=10"
+   },
+   {
+      "nombre":"Carrillo Montero, Vicente",
+      "despacho":"F1.64",
+      "telefono":"954553872",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=11"
+   },
+   {
+      "nombre":"Ceballos Guerrero, Rafael",
+      "despacho":"F0.51",
+      "telefono":"954553865",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=46"
+   },
+   {
+      "nombre":"Corchuelo Gil, Rafael",
+      "despacho":"F1.63",
+      "telefono":"954552770",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=12"
+   },
+   {
+      "nombre":"Cordero Valle, Juan Manuel",
+      "despacho":"F1.69",
+      "telefono":"954555946",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=13"
+   },
+   {
+      "nombre":"Cruz Mata, Fermín",
+      "despacho":"I0.64",
+      "telefono":"954556233",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=111"
+   },
+   {
+      "nombre":"Cruz Risco, Margarita",
+      "despacho":"F1.49",
+      "telefono":"954552772",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=14"
+   },
+   {
+      "nombre":"De Acuña Garrido, Lola",
+      "despacho":"I0.64",
+      "telefono":"670943573",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=135"
+   },
+   {
+      "nombre":"Del Río Ortega, Adela",
+      "despacho":"F0.54",
+      "telefono":"954559814",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=164"
+   },
+   {
+      "nombre":"Díaz Madrigal, Víctor J.",
+      "despacho":"F1.67",
+      "telefono":"954552773",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=15"
+   },
+   {
+      "nombre":"Domínguez Mayo, Francisco José",
+      "despacho":"F1.81",
+      "telefono":"954556949",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=143"
+   },
+   {
+      "nombre":"Durán Toro, Amador",
+      "despacho":"F1.65",
+      "telefono":"954553872",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=16"
+   },
+   {
+      "nombre":"Enríquez de Salamanca Ros, Fernando",
+      "despacho":"F0.50",
+      "telefono":"954553865",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=61"
+   },
+   {
+      "nombre":"Escalona Cuaresma, María José",
+      "despacho":"F1.73",
+      "telefono":"954552852",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=17"
+   },
+   {
+      "nombre":"Fernández Montes, Pablo",
+      "despacho":"I0.67",
+      "telefono":"954556236",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=94"
+   },
+   {
+      "nombre":"Fernández-Montes González, Alejandro",
+      "despacho":"F0.44",
+      "telefono":"954559769",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=131"
+   },
+   {
+      "nombre":"Ferrer Troyano, Francisco J.",
+      "despacho":"F0.49",
+      "telefono":"954553866",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=18"
+   },
+   {
+      "nombre":"Galán Morillo, Francisco J.",
+      "despacho":"F1.66",
+      "telefono":"954552773",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=19"
+   },
+   {
+      "nombre":"Galindo Duarte, José Ángel",
+      "despacho":" E0.40 A",
+      "telefono":"954556973",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=175"
+   },
+   {
+      "nombre":"García Gutiérrez, Jorge",
+      "despacho":"F1.56",
+      "telefono":"954556086",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=133"
+   },
+   {
+      "nombre":"García Rodríguez, José María",
+      "despacho":"F1.56",
+      "telefono":"954556086",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=116"
+   },
+   {
+      "nombre":"García Vallejo, Carlos A.",
+      "despacho":"F1.70",
+      "telefono":"954552768",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=20"
+   },
+   {
+      "nombre":"Gómez López, Mª Teresa",
+      "despacho":"F1.43",
+      "telefono":"954553871",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=47"
+   },
+   {
+      "nombre":"González Romano, José Mariano",
+      "despacho":"F1.71",
+      "telefono":"954552768",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=1"
+   },
+   {
+      "nombre":"Gutiérrez Rodríguez, Javier Jesús",
+      "despacho":"F0.54",
+      "telefono":"954559814",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=98"
+   },
+   {
+      "nombre":"Hernández Salmerón, Inmaculada",
+      "despacho":"I0.63",
+      "telefono":"-",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=161"
+   },
+   {
+      "nombre":"Jiménez Aguirre, Patricia",
+      "despacho":"F1.81",
+      "telefono":"954556949",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=174"
+   },
+   {
+      "nombre":"Jiménez Ramírez, Andrés",
+      "despacho":"F0.83",
+      "telefono":"954559531",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=153"
+   },
+   {
+      "nombre":"Müller Cejás, Carlos",
+      "despacho":"F0.43",
+      "telefono":"954553868",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=108"
+   },
+   {
+      "nombre":"Martín Díaz, Octavio",
+      "despacho":"F1.44",
+      "telefono":"954553871",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=23"
+   },
+   {
+      "nombre":"Martínez Ballesteros, María del Mar",
+      "despacho":"F1.81",
+      "telefono":"954556949",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=145"
+   },
+   {
+      "nombre":"Martínez Gasca, Rafael",
+      "despacho":"F1.68",
+      "telefono":"954552767",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=24"
+   },
+   {
+      "nombre":"Mateos García, Daniel",
+      "despacho":"F0.43",
+      "telefono":"954553868",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=48"
+   },
+   {
+      "nombre":"Mejías Risoto, Manuel",
+      "despacho":"F1.74",
+      "telefono":"954552777",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=25"
+   },
+   {
+      "nombre":"Neira Ayuso, Pablo",
+      "despacho":"I0.66",
+      "telefono":"954556235",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=114"
+   },
+   {
+      "nombre":"Nepomuceno Chamorro, Isabel A.",
+      "despacho":"F0.44",
+      "telefono":"954559769",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=109"
+   },
+   {
+      "nombre":"Nepomuceno Chamorro, Juan Antonio",
+      "despacho":"F0.44",
+      "telefono":"954559769",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=112"
+   },
+   {
+      "nombre":"Ortega Ramírez, Juan Antonio",
+      "despacho":"F1.52",
+      "telefono":"954553869",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=27"
+   },
+   {
+      "nombre":"Ortega Rodríguez, Francisco Javier",
+      "despacho":"I0.72",
+      "telefono":"954556234",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=122"
+   },
+   {
+      "nombre":"Parejo Maestre, José Antonio",
+      "despacho":"F1.56",
+      "telefono":"954556086",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=132"
+   },
+   {
+      "nombre":"Parody Núñez, María Luisa",
+      "despacho":"I0.69",
+      "telefono":"954556238",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=148"
+   },
+   {
+      "nombre":"Peña Siles, Joaquín",
+      "despacho":"F1.51",
+      "telefono":"954556003",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=28"
+   },
+   {
+      "nombre":"Pérez Castellanos, José Antonio",
+      "despacho":"F1.62",
+      "telefono":"954552770",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=29"
+   },
+   {
+      "nombre":"Pontes Balanza, Beatriz",
+      "despacho":"I0.70",
+      "telefono":"954556239",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=119"
+   },
+   {
+      "nombre":"Pozo Hidalgo, Sergio",
+      "despacho":"F0.42",
+      "telefono":"954559897",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=60"
+   },
+   {
+      "nombre":"Ramos Román, Isabel",
+      "despacho":"F1.53",
+      "telefono":"954552776",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=30"
+   },
+   {
+      "nombre":"Reina Quintero, Antonia",
+      "despacho":"F0.52",
+      "telefono":"954556877",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=31"
+   },
+   {
+      "nombre":"Resinas Arias de Reyna, Manuel",
+      "despacho":"F0.47",
+      "telefono":"954553867",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=96"
+   },
+   {
+      "nombre":"Riquelme Santos, José C.",
+      "despacho":"F1.54",
+      "telefono":"954552775",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=2"
+   },
+   {
+      "nombre":"Romero Aleta, Rafael",
+      "despacho":"F1.50",
+      "telefono":"954552772",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=32"
+   },
+   {
+      "nombre":"Romero Moreno, Luisa",
+      "despacho":"F1.48",
+      "telefono":"954553870",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=33"
+   },
+   {
+      "nombre":"Rosa Troyano, Fernando de la",
+      "despacho":"F0.45",
+      "telefono":"954553868",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=34"
+   },
+   {
+      "nombre":"Rubio Escudero, Cristina",
+      "despacho":"I0.70",
+      "telefono":"954556239",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=123"
+   },
+   {
+      "nombre":"Ruiz Cortés, Antonio",
+      "despacho":"F1.46",
+      "telefono":"954556874",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=36"
+   },
+   {
+      "nombre":"Ruiz Cortés, David",
+      "despacho":"F1.45",
+      "telefono":"954556295",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=37"
+   },
+   {
+      "nombre":"Segura Rueda, Sergio",
+      "despacho":"F0.41",
+      "telefono":"954556881",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=120"
+   },
+   {
+      "nombre":"Soria Morillo, Luis Miguel",
+      "despacho":"F0.41",
+      "telefono":"954556881",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=152"
+   },
+   {
+      "nombre":"Tallón Ballesteros, Antonio Javier",
+      "despacho":"I0.68",
+      "telefono":"954556237",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=113"
+   },
+   {
+      "nombre":"Toro Bonilla, Miguel",
+      "despacho":"F1.76",
+      "telefono":"954552778",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=3"
+   },
+   {
+      "nombre":"Torres Valderrama, Jesús",
+      "despacho":"F1.55",
+      "telefono":"954552769",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=39"
+   },
+   {
+      "nombre":"Trinidad Martín-Arroyo, Pablo",
+      "despacho":"F0.42",
+      "telefono":"954559897",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=99"
+   },
+   {
+      "nombre":"Troyano Jiménez, José Antonio",
+      "despacho":"F1.75",
+      "telefono":"954552777",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=40"
+   },
+   {
+      "nombre":"Valle Sevillano, Carmelo del",
+      "despacho":"F1.72",
+      "telefono":"954552771",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=41"
+   },
+   {
+      "nombre":"Varela Vaca, Ángel Jesús",
+      "despacho":"I0.69",
+      "telefono":"954556238",
+      "link":"http://www.lsi.us.es/personal/pagina_personal.php?id=141"
+   }
+]

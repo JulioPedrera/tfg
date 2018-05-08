@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Alert } from 'ionic-angular';
 import { ApiComponents } from '../../components/api-components';
-import { ServiceWS } from '../../app/webservice/WS.service';
 import { LocalDataService } from '../../app/local-data.service';
+import { Profesor } from '../../app/models/profesor.model';
 
 /**
  * Generated class for the ProfesPage page.
@@ -18,12 +18,12 @@ import { LocalDataService } from '../../app/local-data.service';
 })
 export class ProfesPage {
 
-  profes: any[];
+  profes: Profesor[];
+  profesAll: Profesor[];
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private apiComponents: ApiComponents,
-    private serviceWS: ServiceWS,
     public localDataService: LocalDataService) {
       this.getProfes();
     }
@@ -36,10 +36,30 @@ export class ProfesPage {
 
   getProfes(){
     this.profes = this.localDataService.getProfes();
+    this.profesAll = this.profes;
+  }
+
+  public searchBar(ev: any) {
+		let val = ev.target.value;
+		if (val && val.trim() != '') {
+			let filterProfs: Profesor[] = [];
+			this.profesAll.forEach(elem => {
+				if(elem.nombre.toLowerCase().includes(val.toLowerCase())){
+					filterProfs.push(elem)
+				}
+			});
+			this.profes = filterProfs;
+		} else{
+			this.profes = this.profesAll;
+		}
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfesPage');
+    let user = this.localDataService.getUser();
+		if (!user || user == null) {
+			this.navCtrl.setRoot("LoginPage");
+		}
+		console.log("checkUser");
   }
 
 }

@@ -67,7 +67,11 @@ export class PerfilPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PerfilPage');
+    let user = this.localDataService.getUser();
+		if (!user || user == null) {
+			this.navCtrl.setRoot("LoginPage");
+		}
+		console.log("checkUser");
   }
 
 }
